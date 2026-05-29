@@ -1,0 +1,158 @@
+
+mongodb+srv://ryuk:<db_password>@taller-mundial-2026.ytjing5.mongodb.net/
+
+
+// Selección de la base de datos
+use mundial_fifa;
+
+// Inserción en la colección de equipos (con jugadores incrustados)
+db.equipos.insertMany([
+  {
+    "_id": 5,
+    "abbreviation": "col",
+    "country": "Colombia",
+    "confederation": "CONMEBOL",
+    "jugadores": [
+      { "numero": 1, "posicion": "GK", "fifa_popular_name": "OSPINA David", "birth_date": "31.08.1988", "shirt_name": "OSPINA", "club": "Arsenal FC (ENG)", "height": 183, "weight": 80 },
+      { "numero": 2, "posicion": "CB", "fifa_popular_name": "ZAPATA Cristian", "birth_date": "30.09.1986", "shirt_name": "C. ZAPATA", "club": "AC Milan (ITA)", "height": 187, "weight": 82 },
+      { "numero": 3, "posicion": "CB", "fifa_popular_name": "MURILLO Oscar", "birth_date": "18.04.1988", "shirt_name": "O. MURILLO", "club": "CF Pachuca (MEX)", "height": 184, "weight": 80 },
+      { "numero": 4, "posicion": "CB", "fifa_popular_name": "ARIAS Santiago", "birth_date": "13.01.1992", "shirt_name": "ARIAS", "club": "PSV Eindhoven (NED)", "height": 177, "weight": 71 },
+      { "numero": 5, "posicion": "CM", "fifa_popular_name": "BARRIOS Wilmar", "birth_date": "16.10.1993", "shirt_name": "BARRIOS", "club": "CA Boca Juniors (ARG)", "height": 178, "weight": 74 },
+      { "numero": 6, "posicion": "CM", "fifa_popular_name": "SANCHEZ Carlos", "birth_date": "06.02.1986", "shirt_name": "C. SANCHEZ", "club": "RCD Espanyol (ESP)", "height": 182, "weight": 82 },
+      { "numero": 7, "posicion": "CF", "fifa_popular_name": "BACCA Carlos", "birth_date": "08.09.1986", "shirt_name": "BACCA", "club": "Villarreal CF (ESP)", "height": 181, "weight": 77 },
+      { "numero": 8, "posicion": "CM", "fifa_popular_name": "AGUILAR Abel", "birth_date": "06.01.1985", "shirt_name": "AGUILAR T.", "club": "AC Deportivo Cali (COL)", "height": 185, "weight": 82 },
+      { "numero": 9, "posicion": "CF", "fifa_popular_name": "FALCAO Radamel", "birth_date": "10.02.1986", "shirt_name": "FALCAO", "club": "AS Monaco (FRA)", "height": 177, "weight": 72 },
+      { "numero": 10, "posicion": "CM", "fifa_popular_name": "RODRIGUEZ James", "birth_date": "12.07.1991", "shirt_name": "JAMES", "club": "FC Bayern München (GER)", "height": 180, "weight": 75 },
+      { "numero": 11, "posicion": "CM", "fifa_popular_name": "CUADRADO Juan", "birth_date": "26.05.1988", "shirt_name": "CUADRADO", "club": "Juventus FC (ITA)", "height": 179, "weight": 72 },
+      { "numero": 12, "posicion": "GK", "fifa_popular_name": "VARGAS Camilo", "birth_date": "09.03.1989", "shirt_name": "C. VARGAS", "club": "AC Deportivo Cali (COL)", "height": 185, "weight": 80 },
+      { "numero": 13, "posicion": "CB", "fifa_popular_name": "MINA Yerry", "birth_date": "23.09.1994", "shirt_name": "Y. MINA", "club": "FC Barcelona (ESP)", "height": 194, "weight": 95 },
+      { "numero": 14, "posicion": "CF", "fifa_popular_name": "MURIEL Luis", "birth_date": "16.04.1991", "shirt_name": "L. MURIEL", "club": "Sevilla FC (ESP)", "height": 178, "weight": 79 },
+      { "numero": 15, "posicion": "CM", "fifa_popular_name": "URIBE Mateus", "birth_date": "21.03.1991", "shirt_name": "M. URIBE", "club": "Club América (MEX)", "height": 182, "weight": 71 },
+      { "numero": 16, "posicion": "CM", "fifa_popular_name": "LERMA Jefferson ", "birth_date": "25.10.1994", "shirt_name": "J. LERMA", "club": "Levante UD (ESP)", "height": 179, "weight": 70 },
+      { "numero": 17, "posicion": "CB", "fifa_popular_name": "MOJICA Johan", "birth_date": "21.08.1992", "shirt_name": "J. MOJICA", "club": "Girona FC (ESP)", "height": 185, "weight": 66 },
+      { "numero": 18, "posicion": "CB", "fifa_popular_name": "FABRA Frank", "birth_date": "22.02.1991", "shirt_name": "FABRA", "club": "CA Boca Juniors (ARG)", "height": 172, "weight": 72 },
+      { "numero": 19, "posicion": "CF", "fifa_popular_name": "BORJA Miguel", "birth_date": "26.01.1993", "shirt_name": "M. BORJA", "club": "SE Palmeiras (BRA)", "height": 183, "weight": 74 },
+      { "numero": 20, "posicion": "CM", "fifa_popular_name": "QUINTERO Juan", "birth_date": "18.01.1993", "shirt_name": "J. QUINTERO", "club": "CA River Plate (ARG)", "height": 169, "weight": 64 },
+      { "numero": 21, "posicion": "CF", "fifa_popular_name": "IZQUIERDO Jose", "birth_date": "07.07.1992", "shirt_name": "IZQUIERDO", "club": "Brighton & Hove Albion FC (ENG)", "height": 171, "weight": 73 },
+      { "numero": 22, "posicion": "GK", "fifa_popular_name": "CUADRADO Jose", "birth_date": "01.06.1985", "shirt_name": "J.F. CUADRADO", "club": "CD Once Caldas (COL)", "height": 180, "weight": 80 },
+      { "numero": 23, "posicion": "CB", "fifa_popular_name": "SANCHEZ Davinson", "birth_date": "12.06.1996", "shirt_name": "D. SANCHEZ", "club": "Tottenham Hotspur FC (ENG)", "height": 187, "weight": 81 }
+    ]
+  },
+  {
+    "_id": 15,
+    "abbreviation": "jpn",
+    "country": "Japan",
+    "confederation": "AFC",
+    "jugadores": [
+      { "numero": 1, "posicion": "GK", "fifa_popular_name": "KAWASHIMA Eiji", "birth_date": "20.03.1983", "shirt_name": "KAWASHIMA", "club": "FC Metz (FRA)", "height": 185, "weight": 74 },
+      { "numero": 2, "posicion": "CB", "fifa_popular_name": "UEDA Naomichi", "birth_date": "24.10.1994", "shirt_name": "UEDA", "club": "Kashima Antlers (JPN)", "height": 186, "weight": 79 },
+      { "numero": 3, "posicion": "CB", "fifa_popular_name": "SHOJI Gen", "birth_date": "11.12.1992", "shirt_name": "SHOJI", "club": "Kashima Antlers (JPN)", "height": 182, "weight": 74 },
+      { "numero": 4, "posicion": "CM", "fifa_popular_name": "HONDA Keisuke", "birth_date": "13.06.1986", "shirt_name": "HONDA", "club": "CF Pachuca (MEX)", "height": 182, "weight": 74 },
+      { "numero": 5, "posicion": "CB", "fifa_popular_name": "NAGATOMO Yuto", "birth_date": "12.09.1986", "shirt_name": "NAGATOMO", "club": "Galatasaray SK (TUR)", "height": 170, "weight": 68 },
+      { "numero": 6, "posicion": "CB", "fifa_popular_name": "ENDO Wataru", "birth_date": "09.02.1993", "shirt_name": "ENDO", "club": "Urawa Reds (JPN)", "height": 178, "weight": 75 },
+      { "numero": 7, "posicion": "CM", "fifa_popular_name": "SHIBASAKI Gaku", "birth_date": "28.05.1992", "shirt_name": "SHIBASAKI", "club": "Getafe CF (ESP)", "height": 175, "weight": 64 },
+      { "numero": 8, "posicion": "CM", "fifa_popular_name": "HARAGUCHI Genki", "birth_date": "09.05.1991", "shirt_name": "HARAGUCHI", "club": "Fortuna Düsseldorf (GER)", "height": 178, "weight": 68 },
+      { "numero": 9, "posicion": "CF", "fifa_popular_name": "OKAZAKI Shinji", "birth_date": "16.04.1986", "shirt_name": "OKAZAKI", "club": "Leicester City FC (ENG)", "height": 174, "weight": 70 },
+      { "numero": 10, "posicion": "CM", "fifa_popular_name": "KAGAWA Shinji", "birth_date": "17.03.1989", "shirt_name": "KAGAWA", "club": "Borussia Dortmund (GER)", "height": 175, "weight": 68 },
+      { "numero": 11, "posicion": "CM", "fifa_popular_name": "USAMI Takashi", "birth_date": "06.05.1992", "shirt_name": "USAMI", "club": "Fortuna Düsseldorf (GER)", "height": 178, "weight": 72 },
+      { "numero": 12, "posicion": "GK", "fifa_popular_name": "HIGASHIGUCHI Masaaki", "birth_date": "12.05.1986", "shirt_name": "HIGASHIGUCHI", "club": "Gamba Osaka (JPN)", "height": 184, "weight": 78 },
+      { "numero": 13, "posicion": "CF", "fifa_popular_name": "MUTO Yoshinori", "birth_date": "15.07.1992", "shirt_name": "MUTO", "club": "FSV Mainz 05 (GER)", "height": 179, "weight": 72 },
+      { "numero": 14, "posicion": "CM", "fifa_popular_name": "INUI Takashi", "birth_date": "02.06.1988", "shirt_name": "INUI", "club": "SD Eibar (ESP)", "height": 169, "weight": 59 },
+      { "numero": 15, "posicion": "CF", "fifa_popular_name": "OSAKO Yuya", "birth_date": "18.05.1990", "shirt_name": "OSAKO", "club": "1. FC Köln (GER)", "height": 182, "weight": 71 },
+      { "numero": 16, "posicion": "CM", "fifa_popular_name": "YAMAGUCHI Hotaru", "birth_date": "06.10.1990", "shirt_name": "YAMAGUCHI", "club": "Cerezo Osaka (JPN)", "height": 173, "weight": 72 },
+      { "numero": 17, "posicion": "CM", "fifa_popular_name": "HASEBE Makoto", "birth_date": "18.01.1984", "shirt_name": "HASEBE", "club": "Eintracht Frankfurt (GER)", "height": 180, "weight": 72 },
+      { "numero": 18, "posicion": "CM", "fifa_popular_name": "OSHIMA Ryota", "birth_date": "23.01.1993", "shirt_name": "OHSHIMA", "club": "Kawasaki Frontale (JPN)", "height": 168, "weight": 64 },
+      { "numero": 19, "posicion": "CB", "fifa_popular_name": "SAKAI Hiroki", "birth_date": "12.04.1990", "shirt_name": "H. SAKAI", "club": "Olympique Marseille (FRA)", "height": 183, "weight": 70 },
+      { "numero": 20, "posicion": "CB", "fifa_popular_name": "MAKINO Tomoaki", "birth_date": "11.05.1987", "shirt_name": "MAKINO", "club": "Urawa Reds (JPN)", "height": 182, "weight": 77 },
+      { "numero": 21, "posicion": "CB", "fifa_popular_name": "SAKAI Gotoku", "birth_date": "14.03.1991", "shirt_name": "G. SAKAI", "club": "Hamburger SV (GER)", "height": 176, "weight": 74 },
+      { "numero": 22, "posicion": "CB", "fifa_popular_name": "YOSHIDA Maya", "birth_date": "24.08.1988", "shirt_name": "YOSHIDA", "club": "Southampton FC (ENG)", "height": 189, "weight": 78 },
+      { "numero": 23, "posicion": "GK", "fifa_popular_name": "NAKAMURA Kosuke", "birth_date": "27.02.1995", "shirt_name": "NAKAMURA", "club": "Kashiwa Reysol (JPN)", "height": 184, "weight": 72 }
+    ]
+  }
+]);
+
+// Inserción inicial en la colección de partidos
+db.partidos.insertOne({
+  "team_1": "Colombia",
+  "team_2": "Japan",
+  "date": "11/07/18",
+  "time": "12:00:00 p. m."
+});
+
+
+db.equipos.updateOne(
+  { "country": "Colombia", "jugadores.numero": 10 },
+  { 
+    "$set": { 
+      "jugadores.$.shirt_name": "RODRÍGUEZ",
+      "jugadores.$.club": "Real Madrid CF (ESP)"
+    } 
+  }
+);
+
+
+db.partidos.insertOne({
+  "team_1": "Colombia",
+  "team_2": "England",
+  "date": "20/08/18",
+  "time": "6:00:00 p. m."
+});
+
+
+// Aseguramos la existencia previa del partido para el ejercicio
+db.partidos.insertOne({ "team_1": "Poland", "team_2": "Colombia", "date": "26/07/18", "time": "6:00:00 p. m." });
+
+// Consulta de actualización solicitada
+db.partidos.updateOne(
+  { "team_1": "Poland", "team_2": "Colombia", "date": "26/07/18" },
+  { "$set": { "time": "7:30:00 p. m." } }
+);
+
+db.partidos.deleteOne({
+  "team_1": "Colombia",
+  "team_2": "England",
+  "date": "20/08/18"
+});
+
+
+
+db.equipos.aggregate([
+  { "$match": { "country": "Japan" } },
+  { "$unwind": "$jugadores" },
+  { 
+    "$project": {
+      "_id": 0,
+      "nombre": "$jugadores.fifa_popular_name",
+      "fecha_de_nacimiento": "$jugadores.birth_date",
+      "posicion": "$jugadores.posicion",
+      "club": "$jugadores.club"
+    } 
+  }
+]);
+
+db.equipos.aggregate([
+  { "$unwind": "$jugadores" },
+  { "$match": { "jugadores.height": { "$lt": 170 } } },
+  { 
+    "$project": {
+      "_id": 0,
+      "pais": "$country",
+      "jugador": "$jugadores"
+    } 
+  }
+]);
+
+db.partidos.find({});
+
+db.equipos.aggregate([
+  { "$unwind": "$jugadores" },
+  { "$sort": { "jugadores.height": -1 } },
+  { "$limit": 1 },
+  {
+    "$project": {
+      "_id": 0,
+      "pais": "$country",
+      "jugador_mas_alto": "$jugadores"
+    }
+  }
+]);
